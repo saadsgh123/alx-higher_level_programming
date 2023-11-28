@@ -1,10 +1,6 @@
 #!/usr/bin/python3
 for i in range(100):
-    if i < 10:
-        print("0{}".format(i), end=", ")
-    elif i == 99:
-        print("{}".format(i), end="")
-    elif i == 25 or i == 51 or i == 77:
-        print("{}\n".format(i), end="")
+    if i == 99:
+        print("{}".format(i))
     else:
-        print("{}".format(i), end=", ")
+        print("{:02}".format(i), end=", ")
