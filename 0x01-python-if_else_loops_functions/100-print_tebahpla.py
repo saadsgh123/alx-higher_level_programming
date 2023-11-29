@@ -8,3 +8,6 @@ def fizzbuzz():
             char = char - 32
             new += "{}".format(chr(char))
     print("{}".format(new), end="")
+
+if __name__ == '__main__':
+    fizzbuzz()
