@@ -1,13 +1,11 @@
 #!/usr/bin/python3
 def fizzbuzz():
-    new = ""
-    for i in range(1, 101):
-        if i % 3 == 0 and i % 5 == 0:
-            new += "FizzBuzz "
-        elif i % 3 == 0:
-            new += "Fizz "
-        elif i % 5 == 0:
-            new += "Buzz"
+    for number in range(1, 101):
+        if number % 3 == 0 and number % 5 == 0:
+            print("FizzBuzz ", end="")
+        elif number % 3 == 0:
+            print("Fizz ", end="")
+        elif number % 5 == 0:
+            print("Buzz ", end="")
         else:
-            new += "{} ".format(i)
-    print(new, end = " ")
+            print("{} ".format(number), end="")
