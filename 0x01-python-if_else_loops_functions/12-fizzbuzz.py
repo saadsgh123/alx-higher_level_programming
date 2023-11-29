@@ -7,7 +7,7 @@ def fizzbuzz():
         elif i % 3 == 0:
             new += "Fizz "
         elif i % 5 == 0:
-            new += "Buzz "
+            new += "Buzz"
         else:
             new += "{} ".format(i)
-    print(new)
+    print(new, end = " ")
