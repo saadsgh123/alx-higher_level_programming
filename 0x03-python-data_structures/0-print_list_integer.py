@@ -4,4 +4,4 @@ def print_list_integer(my_list=[]):
         print("The list is empty bro!!")
     else:
         for element in my_list:
-            print(element)
+            print("{}".format(element))
