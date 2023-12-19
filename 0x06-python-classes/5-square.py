@@ -31,10 +31,10 @@ class Square:
         self.__size = value
 
     def my_print(self):
-        if self.__size > 0:
-            for i in range(self.size):
-                for i in range(self.__size):
-                    print("{}".format("#"),end="")
-                print("")
-        else:
+        """Print the square with the # character."""
+        for i in range(0, self.__size):
+            for j in range(self.__size):
+                print("#", end="")
+            print("")
+        if self.__size == 0:
             print("")
