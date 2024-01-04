@@ -50,9 +50,3 @@ class Rectangle:
     def perimeter(self):
         """Return the perimeter of the rectangle"""
         return (2 * self.__height) * (2 * self.__width)
-
-
-if __name__ == '__main__':
-    rectangle = Rectangle(1, 2)
-    rectangle.width = 6
-    print(rectangle.__dict__)
