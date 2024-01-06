@@ -5,9 +5,6 @@
 
 
 class Rectangle:
-    # !/usr/bin/python3
-    # 8-rectangle.py
-    # saadsgh123 <sdsghouri@gmail.com>
     """Defines a Rectangle class."""
 
     class Rectangle:
