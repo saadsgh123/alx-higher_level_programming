@@ -1,0 +1,90 @@
+#0-add_integer.txt
+#saadsgh123 <sdsghouri@gmail.com>
+
+===========================
+How to use 0-add_integer.py
+===========================
+
+this module define an addition function of integers called ``add_integer(a, b=98)´´.
+
+    =======
+    Numbers
+    =======
+
+``add_integer(a, b=98)´´ return the addition of two arguments a and b -> (a + b).
+
+    case 1 for simple positive integer combination.
+    ::
+
+        >>> add_integer = __import__('0-add_integer').add_integer
+        >>> add_integer(1, 2)
+        3
+
+    ::
+
+
+    case 2 for positive and negative integer combination.
+    ::
+
+        >>> add_integer(100, -2)
+        98
+
+    ::
+
+    case 3 where just (a) argument is passed.
+
+    ::
+
+        >>> add_integer(2)
+        100
+
+    ::
+
+    case 4 for floating number and integer combination.
+
+    ::
+
+        >>> add_integer(100.3, -2)
+        98
+
+    ::
+
+    ==========
+    Non-Number
+    ==========
+
+    case 1 when (a) is not float or integer
+    ::
+
+    >>> add_integer("School", 3)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    ::
+
+    case 2 when (b) is not float or integer
+    ::
+
+    >>> add_integer(4, "School")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    ::
+
+    case 3 when both (a) and (b) are not integer or float
+    ::
+
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    ::
+
+    case 4:
+    ::
+
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+
+    ::
