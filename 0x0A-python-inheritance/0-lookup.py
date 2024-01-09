@@ -3,5 +3,8 @@
 
 
 def lookup(obj):
-    """function that returns the list of available attributes and methods of an object"""
+    """function that returns the list of available attributes and methods of an object
+    Args:
+        obj - object to check
+    """
     return dir(obj)
