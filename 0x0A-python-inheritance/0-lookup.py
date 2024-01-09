@@ -7,4 +7,4 @@ def lookup(obj):
     Args:
         obj: object to check
     """
-    return dir(obj)
+    return (dir(obj))
