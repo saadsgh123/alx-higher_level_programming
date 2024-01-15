@@ -6,8 +6,21 @@ from base import Base
 
 
 class Rectangle(Base):
-
+    """Represent a rectangle."""
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Initialize a new Rectangle.
+        Args:
+            width (int): The width of the new Rectangle.
+            height (int): The height of the new Rectangle.
+            x (int): The x coordinate of the new Rectangle.
+            y (int): The y coordinate of the new Rectangle.
+            id (int): The identity of the new Rectangle.
+        Raises:
+            TypeError: If either of width or height is not an int.
+            ValueError: If either of width or height <= 0.
+            TypeError: If either of x or y is not an int.
+            ValueError: If either of x or y < 0.
+        """
         self.width = width
         self.height = height
         self.x = x
@@ -71,7 +84,7 @@ class Rectangle(Base):
         return self.__width * self.height
 
     def display(self):
-        """task 7"""
+        """Print the Rectangle using the `#` character."""
         for i in range(self.__y):
             print("")
         for x in range(self.__height):
@@ -81,7 +94,17 @@ class Rectangle(Base):
             print("")
 
     def update(self, *args, **kwargs):
-        """task 8"""
+        """Update the Rectangle.
+
+        Args:
+            *args (ints): New attribute values.
+                - 1st argument represents id attribute
+                - 2nd argument represents width attribute
+                - 3rd argument represent height attribute
+                - 4th argument represents x attribute
+                - 5th argument represents y attribute
+            **kwargs (dict): New key/value pairs of attributes.
+        """
         if len(args) > 0:
             self.id = args[0]
         if len(args) > 1:
@@ -105,6 +128,7 @@ class Rectangle(Base):
                 self.y = kwargs["y"]
 
     def to_dictionary(self):
+        """Return the dictionary representation of a Rectangle."""
         d = dict()
         d["id"] = self.id
         d["width"] = self.width
@@ -114,15 +138,5 @@ class Rectangle(Base):
         return d
 
     def __str__(self):
-        """task 6"""
+        """Return the print() and str() representation of the Rectangle."""
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
-
-
-if __name__ == '__main__':
-    r1 = Rectangle(3, 5, 1)
-    r1_dictionary = r1.to_dictionary()
-    r2 = Rectangle.create(**r1_dictionary)
-    print(r1)
-    print(r2)
-    print(r1 is r2)
-    print(r1 == r2)
