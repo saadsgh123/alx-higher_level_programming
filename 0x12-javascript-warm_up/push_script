@@ -1,6 +1,0 @@
-#!/usr/bin/bash
-git add .
-echo "Enter a commit msg ->"
-read c
-git commit -m "$c"
-git push
