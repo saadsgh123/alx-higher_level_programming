@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/node
 const numbers = process.argv.slice(2);
 const sortedNumbers = numbers.sort();
 if (sortedNumbers.length <= 0) {
