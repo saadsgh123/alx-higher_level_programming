@@ -6,7 +6,7 @@ from model_state import Base, State
 
 if __name__ == '__main__':
 
-    URL = ('mysql+mysqldb://{}:{}@localhost/{}'
+    URL = ('mysql+mysqldb://{}:{}@localhost:3306/{}'
            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     engine = create_engine(URL, pool_pre_ping=True)
 
@@ -15,5 +15,5 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for instance in session.query(State).all():
+    for instance in session.query(State).order_by(State.id):
         print("{}: {}".format(instance.id, instance.name))
