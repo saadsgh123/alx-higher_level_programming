@@ -15,8 +15,14 @@ if __name__ == '__main__':
     exe = "{} {} {}".format(query, join_condition, where_condition)
     cur.execute(exe, (sys.argv[4],))
     rows = cur.fetchall()
+
+    index = 0
     for row in rows:
-        print(row[0], end=" ")
+        if index < len(rows) - 1:
+            print(row[0], end=", ")
+            index += 1
+        else:
+            print(row[0], end=" ")
     print()
     cur.close()
     db.close()
