@@ -22,7 +22,7 @@ if __name__ == '__main__':
             print(row[0], end=", ")
             index += 1
         else:
-            print(row[0], end=" ")
+            print(row[0], end="")
     print()
     cur.close()
     db.close()
