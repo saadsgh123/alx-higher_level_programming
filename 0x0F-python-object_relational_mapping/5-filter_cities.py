@@ -12,7 +12,8 @@ if __name__ == '__main__':
     query = "SELECT cities.name FROM cities"
     join_condition = "LEFT JOIN states ON cities.state_id = states.id"
     where_condition = "WHERE states.name = %s"
-    cur.execute("{} {} {}".format(query, join_condition, where_condition), (sys.argv[4],))
+    exe = "{} {} {}".format(query, join_condition, where_condition)
+    cur.execute(exe, (sys.argv[4],))
     rows = cur.fetchall()
     for row in rows:
         print(row[0], end=" ")
