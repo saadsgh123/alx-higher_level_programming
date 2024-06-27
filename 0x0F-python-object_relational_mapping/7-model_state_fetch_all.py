@@ -10,7 +10,7 @@ from model_state import Base, State
 
 if __name__ == '__main__':
 
-    URL = ('mysql+mysqldb://{}:{}@localhost:3306/{}'
+    URL = ('mysql+mysqldb://{}:{}@localhost/{}'
            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     engine = create_engine(URL, pool_pre_ping=True)
 
