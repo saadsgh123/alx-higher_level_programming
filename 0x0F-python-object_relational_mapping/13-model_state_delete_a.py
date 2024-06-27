@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" prints the State object with the name passed as argument from the database
+"""
+script that deletes all State objects with a name
+containing the letter a from the database hbtn_0e_6_usa
 """
 import sys
 from sqlalchemy import (create_engine)
@@ -13,6 +15,7 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    query = session.query(State).filter(State.name == sys.argv[4])
-    session.delete(query)
+    query = session.query(State).filter(State.name.like('%a%'))
+    for instance in query:
+        session.delete(instance)
     session.commit()
