@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Script that prints the State object with the name
-passed as argument from the database hbtn_0e_6_usa
+""" prints the State object with the name passed as argument from the database
 """
 import sys
 from sqlalchemy import create_engine
@@ -18,3 +16,4 @@ if __name__ == '__main__':
 
     cur_state = session.query(State).filter_by(id=2).first()
     cur_state.name = "New Mexico"
+    session.commit()
