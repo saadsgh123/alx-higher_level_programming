@@ -16,8 +16,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    query = (session.query(State)
-             .filter(State.name.like('%{}%'.format(sys.argv[4]))))
+    query = session.query(State).filter(State.name == sys.argv[4])
     if query.count() == 0:
         print('Not found')
     else:
