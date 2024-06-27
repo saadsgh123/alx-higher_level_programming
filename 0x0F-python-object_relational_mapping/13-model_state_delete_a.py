@@ -18,3 +18,4 @@ if __name__ == '__main__':
     query = session.query(State).filter(State.name.like('%a%'))
     for instance in query:
         session.delete(instance)
+    session.commit()
