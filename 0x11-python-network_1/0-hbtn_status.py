@@ -8,4 +8,4 @@ with urllib.request.urlopen(req) as response:
     print(f"Body response:\n"
           f"    - type: {type(html)}\n"
           f"    - content: {html}\n"
-          f"    - content: {html.decode('utf-8')}")
+          f"    - utf8 content: {html.decode('utf-8')}")
