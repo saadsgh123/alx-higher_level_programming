@@ -11,6 +11,6 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    new_user = User(username="saad", email="<EMAIL>")
+    new_user = User(username="saad")
     session.add(new_user)
     session.commit()
