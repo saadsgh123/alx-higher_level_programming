@@ -25,7 +25,7 @@ def create_app():
     return app
 
 
-from .models import User
+from models import User
 
 
 @login_manager.user_loader
